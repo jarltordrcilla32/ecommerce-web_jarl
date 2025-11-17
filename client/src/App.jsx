@@ -50,7 +50,6 @@ function Router() {
       const token = localStorage.getItem('token')
       if (token) {
         try {
-          // Load user's cart from server (don't push local changes)
           const response = await fetch('http://localhost:5177/api/cart', {
             headers: { Authorization: `Bearer ${token}` }
           })
